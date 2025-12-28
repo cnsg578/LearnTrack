@@ -58,3 +58,15 @@ java -cp out com.airtribe.learntrack.Main
 
 
 The console menu will appear, and you can follow the prompts to interact with the system.
+
+## Class Diagram (Simplified)
+
+Person
+↑
+Student
+
+StudentService  →  StudentRepository  →  Student
+CourseService   →  CourseRepository   →  Course
+EnrollmentService → EnrollmentRepository → Enrollment
+
+Main (console UI) → calls all three services
